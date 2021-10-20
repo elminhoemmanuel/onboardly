@@ -46,13 +46,7 @@ const PageRight = () => {
 
             </div>
 
-            <div className="right-bottom">
-                <PrimaryBtn 
-                    type="button"
-                    btnText="Continue"
-                    addStyle="blue-btn"
-                />
-            </div>
+            
         </div>
     )
 }

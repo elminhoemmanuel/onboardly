@@ -1,9 +1,10 @@
-import {  INCR_STEP , DECR_STEP, SET_METHOD }  from "../types";
+import {  INCR_STEP , DECR_STEP, SET_METHOD, TOGGLE_EXP }  from "../types";
 
 
 const initialState = {
   step:1,
   method:"bvn",
+  explain:false,
 };
 
 export const formReducer = (state = initialState, action) => {
@@ -22,6 +23,11 @@ export const formReducer = (state = initialState, action) => {
       return {
         ...state,
         method: action.payload
+      };
+    case TOGGLE_EXP:
+      return {
+        ...state,
+        explain: !state.explain
       };
     default:
       return state;
