@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import PageLeft from '../components/PageLeft';
+import PageRight from '../components/PageRight';
 
 
 export default function Home() {
 
-  const dispatch = useDispatch();
-  const { articles, error } = useSelector((state) => state.news);
 
   return (
     <>
@@ -15,9 +15,14 @@ export default function Home() {
         <meta name="keywords" content="Onboardly | Homepage" />
       </Head>
 
-      <div className='2xl:max-w-screen-2xl 2xl:mx-auto'>
-        <div className='py-10'>
-          Hello buyfood
+      <div className='container'>
+        <div className='main'>
+          <div className='left-side'>
+            <PageLeft />
+          </div>
+          <div className='right-side'>
+            <PageRight />
+          </div>
         </div>
       </div>
     </>
