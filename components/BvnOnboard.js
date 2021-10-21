@@ -1,8 +1,13 @@
 import React from 'react'
 import BvnInfo from './BvnInfo'
 import Input from './Input'
+import { useDispatch, useSelector } from 'react-redux';
+import BottomCta from './BottomCta';
 
 const BvnOnboard = () => {
+
+    const { explain } = useSelector((state) => state.form);
+
     return (
         <>
             <form className="form">
@@ -14,6 +19,11 @@ const BvnOnboard = () => {
             </form>
 
             <BvnInfo />
+
+            {
+                explain && <BottomCta />
+            }
+
         </>
     )
 }

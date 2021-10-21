@@ -139,28 +139,61 @@
     padding: 1.5rem;
     background: $ash;
     border-radius:$curve;
-    @include flex-center;
-    justify-content: space-between;
+    
 
-    .info-left{
+    .bvninfotop{
         @include flex-center;
-        .lock{
-            display: block;
-            margin-right: 0.6rem;
+        justify-content: space-between;
+        .info-left{
+            @include flex-center;
+            .lock{
+                display: block;
+                margin-right: 0.6rem;
+            }
         }
+    
+        .info-right{
+            @include flex-center;
+            color: $blue;
+            cursor: pointer;
+            .show{
+                margin-right: 0.3rem;
+            }
+        }
+        
     }
 
-    .info-right{
-        @include flex-center;
-        color: $blue;
-        cursor: pointer;
-        .show{
-            margin-right: 0.3rem;
+    .explanation{
+        padding-left: 1.7rem;
+        color: #141737;
+
+        .exptop{
+            padding-bottom: 0.7rem;
+            border-bottom: 1px solid#A5B4CB;
+
+            .point{
+                @include flex-center;
+                
+            }
         }
 
-        .show-icon{
-            
+        .expdown{
+            @include flex-center;
+            padding-top: 0.4rem;
+
         }
+
+        .check{
+            display: block;
+            margin-right: 5px;
+            height: 1rem;
+            width: 1rem;
+        }
+
+    }
+
+    .why{
+        font-weight: bold;
     }
 
 }
