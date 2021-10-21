@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import BvnOnboard from './BvnOnboard';
 import PanOnboard from './PanOnboard';
 
-const PageRight = () => {
+const PageRightFirst = () => {
 
     const { step, method } = useSelector((state) => state.form);
 
@@ -51,4 +51,4 @@ const PageRight = () => {
     )
 }
 
-export default PageRight
+export default PageRightFirst
