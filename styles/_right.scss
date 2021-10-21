@@ -103,7 +103,7 @@
 
 .form{
     padding-right:3.45rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
 }
 
 .form-pan{
@@ -133,6 +133,36 @@
     justify-content: end;
     padding-top: 1.2rem;
     padding-bottom: 0.7rem;
+}
+
+.bvninfo{
+    padding: 1.5rem;
+    background: $ash;
+    border-radius:$curve;
+    @include flex-center;
+    justify-content: space-between;
+
+    .info-left{
+        @include flex-center;
+        .lock{
+            display: block;
+            margin-right: 0.6rem;
+        }
+    }
+
+    .info-right{
+        @include flex-center;
+        color: $blue;
+        cursor: pointer;
+        .show{
+            margin-right: 0.3rem;
+        }
+
+        .show-icon{
+            
+        }
+    }
+
 }
 
 
