@@ -1,0 +1,191 @@
+@import "./mixins";
+@import "./variables";
+
+// utilities
+.pri-btn{
+    @include btn(white); 
+    padding: 0.8rem 1.5rem; 
+}
+
+.red-btn{
+    background: $red;
+    &:hover{
+        background: $redhover;
+    }
+}
+
+.blue-btn{
+    background: $blue;
+    &:hover{
+        background: $bluehover;
+    }  
+}
+
+
+.right-top{
+    display: flex;
+    justify-content: end;
+}
+
+.right-home{
+    padding: 1.3rem 2.5rem;
+    color: $text;
+    font-size: $basefont;
+    // width: 100%;
+}
+
+.stepbar{
+    @include flex-center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid $ash;
+    flex-wrap: wrap;
+}
+
+.step{
+    @include flex-center;
+    margin-right: 2rem;
+    .step-icon-active{
+        @include stepicon( $blue , white);
+    }
+    
+    .step-icon{
+        @include stepicon( $ash , $graytext);
+    }
+    
+    .step-text-active{
+        @include steptext( $text );
+    }
+    
+    .step-text{
+        @include steptext( $graytext);
+    }
+
+    .step-icon-done{
+        @include stepIconDone( $ashhover , $blue, 3px, 9.5px);
+        .done-icon{
+            width: 0.8rem;
+            height: 0.8rem;
+            padding-top: 5px;
+        }
+    }
+}
+
+.current-step{
+    font-size: $basefont;
+    color: $graytext;
+    margin: 1.3rem 0;
+}
+
+.header{
+    font: $basefont + 6px;
+    @include spacebelow(2rem)
+}
+
+.methodbar{
+    @include flex-center;
+    @include spacebelow(2rem);
+    .method-btn{
+        @include btn($text);
+        @include methodbtn($ash,$ash);
+        
+    }
+
+    .focused-btn{
+        @include btn($text);
+        @include methodbtn($ashhover,$blue);
+    }
+}
+
+.label{
+    @include spacebelow(0.7rem);
+}
+
+
+.form{
+    padding-right:3.45rem;
+    padding-bottom: 3rem;
+}
+
+.form-pan{
+    padding-right:3.45rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid#E9EEF4;
+    display: flex;
+
+    .left-half{
+        width: 43%;
+        margin-right: 14%;
+    }
+
+    .right-half{
+        width: 43%;
+    }
+}
+
+.input{
+    display: block;
+    @include input;
+}
+
+
+.right-bottom{
+    display: flex;
+    justify-content: end;
+    padding-top: 1.2rem;
+    padding-bottom: 0.7rem;
+}
+
+
+// Media queries
+// MQ for extra large screens responsive display
+@media only screen and (min-width: 1536px) {
+    
+}
+
+// MQ for large screens responsive display
+@media only screen and (min-width: 1024px) {
+    
+}
+
+// MQ for medium screens responsive display
+@media only screen and (min-width: 769px) and (max-width: 1025px) {
+    .form-pan{
+        .left-half{
+            width: 40%;
+            margin-right: 20%;
+        }
+    
+        .right-half{
+            width: 40%;
+        }
+    }
+}
+
+// MQ for small screens responsive display
+@media only screen and (max-width: 768px) {
+    .right-top{
+        @include hidden;
+    }
+    .step-text, .step-text-active{
+        @include hidden;
+    }
+
+    .form-pan{
+        flex-direction: column;
+        .left-half{
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+    
+        .right-half{
+            width: 100%;
+        }
+    }
+
+    .method-btn , .focused-btn{
+        white-space: nowrap !important;
+        margin-right: 0.6rem !important;
+        font-size: $basefont !important;
+    }
+}

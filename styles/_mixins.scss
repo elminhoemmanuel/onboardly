@@ -1,0 +1,81 @@
+@import "./variables";
+
+@mixin btn($color) {
+    border-radius: $curve;
+    cursor: pointer;
+    color: $color;
+    font-size: $basefont;
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}
+@mixin methodbtn( $bg, $border ) {
+    font-size: $basefont + 2px;
+    background: $bg;
+    border: 1px solid $border !important;
+    margin-right: 1.5rem;
+    &:hover{
+        background: $ashhover;
+        border: 1px solid $blue !important;
+    }
+}
+
+@mixin stepicon( $bggiven, $colorgiven) {
+    padding: 6.5px 13.5px;
+    border-radius: 3px;
+    background: $bggiven;
+    color: $colorgiven;
+    margin-right: 5px; 
+}
+
+@mixin stepIconDone( $bggiven, $colorgiven, $vert, $horiz) {
+    padding: $vert $horiz;
+    border-radius: 3px;
+    background: $bggiven;
+    color: $colorgiven;
+    margin-right: 5px; 
+}
+
+@mixin steptext($color) {
+    font-size: $basefont + 2px; 
+    color: $color;
+}
+
+@mixin spacebelow($space) {
+    margin-bottom: $space;
+}
+
+@mixin input{
+    padding: 1rem 1.7rem;
+    display: block;
+    width: 100% ;
+    border-radius: $curve;
+    color: $text;
+    border: 1px solid $ash;
+    &:focus{
+        outline: none;
+        border: 1px solid $blue;
+    }
+}
+
+@mixin placeholder($value) {
+    &::placeholder{
+        color: $value;
+    }
+    &::-moz-placeholder{
+        color: $value;
+    }
+    &::-webkit-input-placeholder{
+        color: $value;
+    }
+}
+
+@mixin flex-center {
+    display:flex;
+    align-items: center;
+}
+
+@mixin hidden {
+    display: none;
+}
