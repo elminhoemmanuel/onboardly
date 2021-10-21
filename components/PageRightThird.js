@@ -1,10 +1,9 @@
 import React from 'react'
 import PrimaryBtn from "./PrimaryBtn"
 import StepBar from './StepBar'
-import ChooseMethod from './ChooseMethod'
 import { useDispatch, useSelector } from 'react-redux';
-import BvnOnboard from './BvnOnboard';
-import PanOnboard from './PanOnboard';
+import BottomCta from './BottomCta';
+import BizCategory from './BizCategory';
 
 const PageRightThird = () => {
 
@@ -27,6 +26,9 @@ const PageRightThird = () => {
                 <h1 className="header">Business Category</h1>
             </div>
 
+            <BizCategory />
+
+            <BottomCta />
             
         </div>
     )

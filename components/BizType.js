@@ -1,53 +1,52 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import PrimaryBtn from "./PrimaryBtn";
-import { setMethod } from '../redux/actions/form';
+import { setPos } from '../redux/actions/form';
 
-const ChooseMethod = () => {
+const BizType = () => {
 
     const dispatch = useDispatch();
-    const { method } = useSelector((state) => state.form);
+    const { pos } = useSelector((state) => state.form);
     useEffect(() => {
-        dispatch(setMethod("bvn"))
+        dispatch(setPos("no"))
     }, [])
 
     return (
         <>
             <div>
-                <p className="" style={{ marginBottom: "0.6rem" }}>Select a verification method</p>
+                <p className="" style={{ marginBottom: "0.6rem" }}>Do you use POS machines for your business?</p>
             </div>
-
             <div className="methodbar">
                 {
-                    method === "bvn" ?
+                    pos === "yes" ?
                         <PrimaryBtn
                             type="button"
-                            btnText="BVN"
+                            btnText="Yes"
                             addStyle="focused-btn"
-                            clicked={() => dispatch(setMethod("bvn"))}
+                            clicked={() => dispatch(setPos("yes"))}
                         /> :
                         <PrimaryBtn
                             type="button"
-                            btnText="BVN"
+                            btnText="Yes"
                             addStyle="method-btn"
-                            clicked={() => dispatch(setMethod("bvn"))}
+                            clicked={() => dispatch(setPos("yes"))}
                         />
                 }
 
 
                 {
-                    method === "pan" ?
+                    pos === "no" ?
                         <PrimaryBtn
                             type="button"
-                            btnText="Personal Account Number"
+                            btnText="No"
                             addStyle="focused-btn"
-                            clicked={() => dispatch(setMethod("pan"))}
+                            clicked={() => dispatch(setPos("no"))}
                         /> :
                         <PrimaryBtn
                             type="button"
-                            btnText="Personal Account Number"
+                            btnText="No"
                             addStyle="method-btn"
-                            clicked={() => dispatch(setMethod("pan"))}
+                            clicked={() => dispatch(setPos("no"))}
                         />
                 }
             </div>
@@ -55,4 +54,4 @@ const ChooseMethod = () => {
     )
 }
 
-export default ChooseMethod
+export default BizType

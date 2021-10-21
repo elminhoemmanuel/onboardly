@@ -27,9 +27,7 @@ const PageRightFirst = () => {
                 <h1 className="header">Verify Account</h1>
             </div>
 
-            <div>
-                <p className="" style={{marginBottom:"0.6rem"}}>Select a verification method</p>
-            </div>
+            
 
             <div>
                 <ChooseMethod />

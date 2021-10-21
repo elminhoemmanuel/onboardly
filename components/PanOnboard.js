@@ -1,6 +1,7 @@
 import React from 'react'
 import BottomCta from './BottomCta'
 import Input from './Input'
+import Select from './Select'
 
 const PanOnboard = () => {
     return (
@@ -16,8 +17,7 @@ const PanOnboard = () => {
 
                 <div className="right-half">
                     <p className="label"><label for="bank" >Select Bank</label></p>
-                    <Input
-                        type="select"
+                    <Select
                         id="bank"
                     />
                 </div>

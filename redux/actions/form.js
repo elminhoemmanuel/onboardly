@@ -1,6 +1,6 @@
-import { SET_METHOD, TOGGLE_EXP } from "../types";
+import { SET_METHOD, TOGGLE_EXP, SET_POS } from "../types";
 
-//action to like a picture
+//action to set verification method
 export const setMethod = (method) => (dispatch) => {
 
     dispatch({ 
@@ -10,7 +10,17 @@ export const setMethod = (method) => (dispatch) => {
 
 }
 
-//action to like a picture
+//action to set  POS choice
+export const setPos = (value) => (dispatch) => {
+
+    dispatch({ 
+        type: SET_POS,
+        payload:value
+    })
+
+}
+
+//action to toggle explainer
 export const toggleExp = () => (dispatch) => {
 
     dispatch({ 
