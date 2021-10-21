@@ -2,11 +2,30 @@ import Head from 'next/head'
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import PageLeft from '../components/PageLeft';
-import PageRight from '../components/PageRight';
+import PageRightFirst from '../components/PageRightFirst';
+import PageRightSecond from '../components/PageRightSecond';
+import PageRightThird from '../components/PageRightThird';
 
 
 export default function Home() {
 
+    const { step } = useSelector((state) => state.form);
+
+    const getStep = () =>{
+        switch (step) {
+            case 1:
+                return <PageRightFirst />
+        
+            case 2:
+                return <PageRightSecond />
+        
+            case 3:
+                return <PageRightThird />
+        
+            default:
+                break;
+        }
+    }
 
   return (
     <>
@@ -21,7 +40,7 @@ export default function Home() {
             <PageLeft />
           </div>
           <div className='right-side'>
-            <PageRight />
+            {getStep()}
           </div>
         </div>
       </div>

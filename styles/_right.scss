@@ -127,6 +127,23 @@
     @include input;
 }
 
+.input-box-icon{
+    position: relative;
+
+    .input-icon{
+        display: block;
+        @include input;
+        padding-left: 2rem !important;
+    }
+
+    .atsymbol{
+        position: absolute;
+        top: 10%;
+        left: 3%;
+        color: #7D8DA7;
+    }
+}
+
 
 .right-bottom{
     display: flex;
@@ -198,6 +215,21 @@
 
 }
 
+.second-form-pan{
+    border-bottom: none !important;
+    padding-bottom: 1rem;
+}
+
+.second-explainer{
+    color: #7D8DA7;
+    margin-bottom: 2rem;
+}
+
+.second-header{
+    font: $basefont + 6px;
+    margin-bottom: 0 !important;
+}
+
 
 // Media queries
 // MQ for extra large screens responsive display
@@ -206,7 +238,7 @@
 }
 
 // MQ for large screens responsive display
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
     
 }
 
