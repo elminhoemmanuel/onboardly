@@ -147,7 +147,20 @@
 
 .right-bottom{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+    padding-bottom: 0.7rem;
+
+    .method-btn{
+        @include btn($text);
+        @include methodbtn($ash,$ash);
+        
+    }
+}
+
+.right-bottom-alone{
+    display: flex;
+    justify-content: flex-end;
     padding-top: 1.2rem;
     padding-bottom: 0.7rem;
 }
@@ -228,6 +241,25 @@
 .second-header{
     font: $basefont + 6px;
     margin-bottom: 0 !important;
+}
+
+.biz-wrapper{
+    border-bottom: 1px solid#E9EEF4;
+    .form-pan{
+        padding-right:3.45rem;
+        padding-bottom: 1.5rem;
+        display: flex;
+        border-bottom: none !important;
+    
+        .left-half{
+            width: 43%;
+            margin-right: 14%;
+        }
+    
+        .right-half{
+            width: 43%;
+        }
+    }
 }
 
 
